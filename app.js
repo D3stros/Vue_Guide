@@ -1,12 +1,11 @@
 new Vue({
   el: "#app",
   data: {
-    title: "Becoming a Vue ninja",
-    wage: 10
+    title: "Becoming a Vue ninja"
   },
   methods: {
-    changeWage(amount) {
-      this.wage += amount;
+    logEvent(e) {
+      console.log(e);
     }
   }
 });
