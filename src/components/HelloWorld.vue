@@ -1,12 +1,17 @@
 <template>
   <div class="hello">
     <h1>{{title}}</h1>
+    <Navbar />
   </div>
 </template>
 
 <script>
+import Navbar from './Navbar'
 export default {
   name: 'HelloWorld',
+  components: {
+    Navbar
+  },
   data () {
     return {
       title: 'My first Vue app :)'
