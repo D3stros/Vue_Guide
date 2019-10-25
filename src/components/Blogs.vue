@@ -3,7 +3,7 @@
     <h2>Blogs</h2>
     <div v-for="post in posts" :key="post.id">
       <h3>{{post.title}}</h3>
-      <p>{{post.body}}</p>
+      <p>{{post.body |snippet}}</p>
     </div>
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
   methods: {
   },
   created () {
-    axios.get('https://jsonplaceholder.typicode.com/postss/')
+    axios.get('https://jsonplaceholder.typicode.com/posts/')
       .then(response => {
         this.posts = response.data
       }).catch(err => {
